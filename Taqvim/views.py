@@ -14,8 +14,13 @@ def Vaqtol(viloyat):
         "Accept-Language" : "en-US,en;q=0.5",
         "User-Agent": "Defined",
     }
-    get_responce = requests.get(url)
-    viloyat = get_responce.text
+    # url = "http://campanulaceae.myspecies.info/"
+
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'})
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # get_responce = requests.get(url)
+    # viloyat = get_responce.text
     # ok = viloyat.split('Hozirgi vaqt:')
     # asr1 = ok[1].split('<p class="time" id="asr">')
     # shom1 = asr1[1].split('const times = [')
@@ -23,7 +28,7 @@ def Vaqtol(viloyat):
     # shom = shom[0].replace('\n        ', '')
     # shom = shom.replace("'", '')
     # vaqt = shom.split(',')
-    return HttpResponse(viloyat)
+    return HttpResponse(soup)
 
 
 def home(request):
