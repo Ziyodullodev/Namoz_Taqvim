@@ -8,7 +8,8 @@ from django.http import JsonResponse
 
  
 def Vaqtol(viloyat):
-    url = f"https://namozvaqti.uz/shahar/{viloyat}"
+    # url = f"https://namozvaqti.uz/shahar/{viloyat}"
+    url = "https://namozvaqti.uz/shahar/toshkent"
     get_responce = requests.get(url)
     viloyat = get_responce.text
     ok = viloyat.split('Hozirgi vaqt:')
@@ -19,11 +20,11 @@ def Vaqtol(viloyat):
     shom = shom.replace("'", '')
     vaqt = shom.split(',')
     return vaqt
-     
+
 
 def home(request):
-    # vaqt = Vaqtol('margilon')
-    # vaqt = vaqt.split(',')
+    vaqt = Vaqtol('margilon')
+    vaqt = vaqt.split(',')
     content = {
         'bomdod': "vaqt[0]",
         'quyosh': "vaqt[1]",
