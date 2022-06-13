@@ -9,7 +9,7 @@ from django.http import JsonResponse
  
 def Vaqtol(viloyat):
     # url = f"https://namozvaqti.uz/shahar/{viloyat}"
-    url = "http://namozvaqti.uz/shahar/toshkent"
+    url = "http://namozvaqti.uz/"
     headers = {
         "Accept-Language" : "en-US,en;q=0.5",
         "User-Agent": "Defined",
