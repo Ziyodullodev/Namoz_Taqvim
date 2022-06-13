@@ -16,21 +16,21 @@ def Vaqtol(viloyat):
     }
     get_responce = requests.get(url, headers=headers)
     viloyat = get_responce.text
-    ok = viloyat.split('Hozirgi vaqt:')
-    asr1 = ok[1].split('<p class="time" id="asr">')
-    shom1 = asr1[1].split('const times = [')
-    shom = shom1[1].split('];')
-    shom = shom[0].replace('\n        ', '')
-    shom = shom.replace("'", '')
-    vaqt = shom.split(',')
-    return vaqt
+    # ok = viloyat.split('Hozirgi vaqt:')
+    # asr1 = ok[1].split('<p class="time" id="asr">')
+    # shom1 = asr1[1].split('const times = [')
+    # shom = shom1[1].split('];')
+    # shom = shom[0].replace('\n        ', '')
+    # shom = shom.replace("'", '')
+    # vaqt = shom.split(',')
+    return viloyat
 
 
 def home(request):
     vaqt = Vaqtol('margilon')
-    vaqt = vaqt.split(',')
+    # vaqt = vaqt.split(',')
     content = {
-        'bomdod': "vaqt[0]",
+        'bomdod': vaqt,
         'quyosh': "vaqt[1]",
         'peshin': "vaqt[2]",
         'asr': "vaqt[3]",
