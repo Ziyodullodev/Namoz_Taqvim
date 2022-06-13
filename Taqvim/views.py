@@ -10,7 +10,11 @@ from django.http import JsonResponse
 def Vaqtol(viloyat):
     # url = f"https://namozvaqti.uz/shahar/{viloyat}"
     url = "https://namozvaqti.uz/shahar/toshkent"
-    get_responce = requests.get(url)
+    headers = {
+        "Accept-Language" : "en-US,en;q=0.5",
+        "User-Agent": "Defined",
+    }
+    get_responce = requests.get(url, headers=headers)
     viloyat = get_responce.text
     ok = viloyat.split('Hozirgi vaqt:')
     asr1 = ok[1].split('<p class="time" id="asr">')
