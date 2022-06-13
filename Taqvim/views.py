@@ -4,7 +4,7 @@ from django.http import HttpResponse
 import requests
 from rest_framework.views import APIView
 from django.http import JsonResponse
-
+from bs4 import BeautifulSoup
 
  
 def Vaqtol(viloyat):
