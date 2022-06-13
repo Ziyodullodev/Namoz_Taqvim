@@ -22,15 +22,15 @@ def Vaqtol(viloyat):
      
 
 def home(request):
-    vaqt = Vaqtol('margilon')
-    vaqt = vaqt.split(',')
+    # vaqt = Vaqtol('margilon')
+    # vaqt = vaqt.split(',')
     content = {
-        'bomdod': vaqt[0],
-        'quyosh': vaqt[1],
-        'peshin': vaqt[2],
-        'asr': vaqt[3],
-        'shom': vaqt[4],
-        'xufton': vaqt[5]
+        'bomdod': "vaqt[0]",
+        'quyosh': "vaqt[1]",
+        'peshin': "vaqt[2]",
+        'asr': "vaqt[3]",
+        'shom': "vaqt[4]",
+        'xufton':" vaqt[5]"
 
     }
     return render(request, 'index.html', content)
