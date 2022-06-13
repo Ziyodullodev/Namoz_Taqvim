@@ -38,6 +38,12 @@ def home(request):
 
 # class NamozApiView(APIView):
 def Namoz_view(request, *args , **kwargs):
+
+    if request.method == 'POST':
+        data = {
+            'ok':"True"
+        }
+        return JsonResponse(data)
     body = request.body
     try:
         data = json.loads(body)

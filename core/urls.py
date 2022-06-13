@@ -18,6 +18,7 @@ from django.urls import path
 from Taqvim.views import home, Namoz_view
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', home),
+    path('', home),
+    path('namoz/', Namoz_view),
     path('namoz/', Namoz_view),
 ]
