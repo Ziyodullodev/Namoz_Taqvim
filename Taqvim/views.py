@@ -14,7 +14,7 @@ def Vaqtol(viloyat):
         "Accept-Language" : "en-US,en;q=0.5",
         "User-Agent": "Defined",
     }
-    get_responce = requests.get(url, headers=headers)
+    get_responce = requests.get(url)
     viloyat = get_responce.text
     # ok = viloyat.split('Hozirgi vaqt:')
     # asr1 = ok[1].split('<p class="time" id="asr">')
