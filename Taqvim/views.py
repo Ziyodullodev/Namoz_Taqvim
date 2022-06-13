@@ -8,8 +8,8 @@ from django.http import JsonResponse
 
  
 def Vaqtol(viloyat):
-    # url = f"https://namozvaqti.uz/shahar/{viloyat}"
-    url = "http://ziyodullo2000.myxost.uz/Taqvim/API/Api.php?city=fargona"
+    url = f"https://namozvaqti.uz/shahar/margilon"
+    # url = "http://ziyodullo2000.myxost.uz/Taqvim/API/Api.php?city=fargona"
     headers = {
         "Accept-Language" : "en-US,en;q=0.5",
         "User-Agent": "Defined",
@@ -23,7 +23,7 @@ def Vaqtol(viloyat):
     # shom = shom[0].replace('\n        ', '')
     # shom = shom.replace("'", '')
     # vaqt = shom.split(',')
-    return viloyat
+    return HttpResponse(viloyat)
 
 
 def home(request):
