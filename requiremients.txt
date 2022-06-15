@@ -12,3 +12,4 @@ urllib3==1.26.9
 beautifulsoup4==4.11.1
 bs4==0.0.1
 lxml==4.9.0
+django-cors-headers==3.13.0
