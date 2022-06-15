@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Taqvim.views import home, Namoz_view
+from Taqvim.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    path('namoz/', Namoz_view),
-    path('namoz/', Namoz_view),
 ]
