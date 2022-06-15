@@ -94,6 +94,3 @@ def pray_time(a, til):
         
         return dict_time
         
-
-aa = pray_time(13, 'uz')
-print(aa)   
