@@ -8,5 +8,54 @@
      
      <a href="https://t.me/Foydali_hacker">My Telegram</a>
     
+     
+     <h2>
+        Soat: <span id="vaqt" style="color: red;"></span>
+    </h2>
+    <h2>
+        Shaxar: <span id="shaxar" style="color: red;"></span>
+    </h2>
+    <h2>
+        Xaftaning : <span id="xafta" style="color: red;"></span> kuni
+    </h2>
+    <h2>
+        tong: <span id="tong" style="color: red;"></span>
+    </h2>
+    <h2>
+        Quyosh: <span id="quyosh" style="color: red;"></span>
+    </h2>
+    <h2>
+        Bugun: <span id="peshin" style="color: red;"></span>
+    </h2>
+    <h2>
+        Asr: <span id="asr" style="color: red;"></span>
+    </h2>
+    <h2>
+        Shom: <span id="shom" style="color: red;"></span>
+    </h2>
+    <h2>
+        Xufton: <span id="xufton" style="color: red;"></span>
+    </h2>
+    <script>
+    const get = async () => {
+        const res = fetch("http://185.105.91.14:8000/API/uz/13/");
+        const data = await res.then(res => res.json());
+        console.log(data)
+        document.getElementById('vaqt').innerHTML += data?.soat;
+        document.getElementById('shaxar').innerHTML += data?.shaxar;
+        document.getElementById('xafta').innerHTML += data?.kun + " kuni";
+        document.getElementById('tong').innerHTML += data?.tong;
+        document.getElementById('quyosh').innerHTML += data?.quyosh;
+        document.getElementById('peshin').innerHTML += data?.peshin;
+        document.getElementById('asr').innerHTML += data?.asr;
+        document.getElementById('shom').innerHTML += data?.shom;
+        document.getElementById('xufton').innerHTML += data?.xufton;
+     
+    }
+    
+    get();
+    </script>
+    
 </body>
+
 </html>
